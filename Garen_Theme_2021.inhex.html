@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ 
+<head>
+
+
+<script type="text/javascript"
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+<title>{Title}</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+ 
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+<meta name="color:background" content="#b8becc"/>
+<meta name="color:bold" content="#0e2963"/>
+<meta name="color:italics" content="#d8a455"/>
+<meta name="color:links" content="#c1894d"/>
+<meta name="color:links hover" content="#233979"/>
+<meta name="color:info bold" content="#092857"/>
+<meta name="color:info italic" content="3495de"/>
+<meta name="color:text" content="#000000"/>
+<meta name="color:nav" content="#233979"/>
+<meta name="color:nav hover" content="#edcd86"/>
+<meta name="color:scrollbar" content="#1a3570"/>
+<meta name="color:ask bg" content="#233979"/>
+<meta name="color:qfirstletter" content="#5a83da"/>
+<meta name="color:permalink bg" content="c3ccd1"/>
+<meta name="color:plinks" content="#2252b8"/>
+<meta name="color:plinks hover" content="#c38431"/>
+ 
+<meta name="image:background" content=""/>
+<meta name="image:sword" content=""/>
+<meta name="image:emblem" content=""/>
+ 
+<style type="text/css">
+
+.floating{
+    float:left;
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 3.75s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3.75s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 10px);}
+    to {-webkit-transform:translate(0, -0px);}
+}
+
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 10px);}
+    to {-moz-transform:translate(0, -0px);}
+}
+
+@font-face {font-family:"tulpenone";src: url('https://dl.dropboxusercontent.com/s/fj1hvihfqtt55v7/tulpenone-regular.ttf?dl=1'); format("truetype");}
+
+@font-face { font-family: "aaargh"; src: url('https://dl.dropboxusercontent.com/s/bnyoyt2m3w06ehr/aaargh.ttf?dl=1'); format(“truetype”);}
+
+@font-face{ font-family:"talldark"; src:url('https://dl.dropboxusercontent.com/s/tf324r461gnf97q/talldark.ttf');}
+
+@font-face {font-family: "basicl";src: url('https://dl.dropboxusercontent.com/s/gcupkgtql0xvjge/basicl.ttf?dl=1'); format("truetype");}
+
+@font-face { font-family: "bebas_neue"; src: url('https://dl.dropboxusercontent.com/s/scbj3da4dz3dfmf/bebasneue.otf?dl=1'); format(“truetype”);}
+
+@font-face {font-family: "laine";src: url('https://dl.dropboxusercontent.com/s/q2nwfx6s9t3k759/laine.ttf?dl=1'); format("truetype");}
+
+@font-face { font-family:"quil"; src: url('https://dl.dropboxusercontent.com/s/vjx3n6utzrjjr2r/quil_s_t.ttf'); format(“truetype”);}
+
+@font-face {font-family: "alexbrush";src: url('https://dl.dropboxusercontent.com/s/y48zvcvymdw1vmo/alexbrush-regular.ttf?dl=1'); format("truetype");}
+
+@font-face { font-family: "abbeyline"; src: url('https://dl.dropboxusercontent.com/s/xlbk9c4ttfsc8ht/abbeyline.ttf?dl=1'); format(“truetype”);}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: {color:scrollbar};
+    height:3px;  
+    width:8px;
+}
+   
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: {color:scrollbar};
+    height:3px;
+    width:8px;
+    }
+   
+::-webkit-scrollbar {
+    background-color:transparent;
+    height:3px;
+    width:6px;
+    }
+ 
+body {
+    background:{color:background};
+    background-image:url('{image:background}');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:left 20px top 0px;
+    margin:0px;
+    color:{color:text};
+    font-family:trebuchet ms;
+    font-size:11px;
+    line-height:17px;
+}
+ 
+b, em, strong{
+    color:{color:bold};
+    font-style: bold;
+    font-family:georgia;
+    font-size:12px;
+    text-shadow:1px 1px 5px {color:bold};
+    }
+ 
+i, em {
+    color:{color:italics};
+    font-style: italic;
+    font-family:georgia;
+    font-size:11px;
+    text-shadow:0px 0px 0px {color:italics};
+}
+
+small{
+    font-size:11px;
+}
+
+a{
+    text-decoration:none;
+    font-family:georgia;
+    font-size:11px;
+    color:{color:links};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+a:hover{
+    text-decoration:none;
+    color:{color:links hover};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+ 
+img{
+    border:none;
+}
+ 
+blockquote{
+    margin-left:20px;
+    padding-left:10px;
+    padding-top:2px;
+    padding-bottom:2px;
+    border-left:double {color:scrollbar};
+    border-radius:7px;
+    width:92%;
+}
+
+#sword{
+    position:fixed;
+    height:170px;
+    width:140px;
+    margin-left:674px;
+    margin-top:96px;
+    background-image:url('{image:sword}');
+    background-repeat:no-repeat;
+    z-index:999;
+}
+
+#emblem{
+    position:fixed;
+    height:120px;
+    width:200px;
+    margin-left:588px;
+    margin-top:449px;
+    z-index:999;
+}
+
+#emblem a{
+    position:fixed;
+    opacity:.8;
+    -moz-transition-duration: 0.8s;  
+    -webkit-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+}
+
+#emblem a:hover{
+    position:fixed;
+    margin-top:-50px;
+    width:200px;
+    height:170px;
+    opacity:1;
+    -moz-transition-duration: 0.8s;  
+    -webkit-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+}
+
+#info{
+    position:fixed;
+    margin-left:180px;
+    margin-top:677px;
+    height:80px;
+    width:220px;
+    padding:10px;
+    text-align:center;
+    line-height:13px;
+    color:black;
+    background-color:transparent;
+    
+}
+
+#info b, strong{
+    color:{color:info bold};
+    font-style:bold;
+    font-family:georgia;
+    font-size:14px;
+    text-shadow:1px 1px 5px {color:info bold};
+}
+
+#info i, em{
+    color:{color:info italic};
+    font-style: italic;
+    font-family:georgia;
+    font-size:12px;
+}
+
+#nav{
+    position:fixed;
+    margin-top:175px;
+    margin-left:820px;
+    opacity:1;
+    width:500px;
+    height:27px;
+}
+ 
+#nav a{
+    margin-left:10px;
+    display:inline-block;
+    background-color:{color:nav};
+    color:white;
+    font-size:10px;
+    height:17px;
+    width:40px;
+    padding:2px;
+    text-align:center;
+    opacity:1;
+    border:double white;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+#nav a:hover{
+    color:white;
+    background-color:{color:nav hover};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+ 
+#pagination {
+    width:250px;
+    display:inline-block;
+    position:fixed;
+    margin-left:970px;
+    margin-top:110px;
+    opacity:1;
+    text-align:center;
+    font-size:20px;
+    color:white;
+    text-align:right;
+}
+ 
+#pagination a{
+    color:{color:nav};
+    font-size:20px;
+    opacity:1;
+    font-style:italic;
+    font-style:bold;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    text-shadow:-1px -1px 3px {color:nav};
+}
+ 
+#pagination a:hover{
+    color:white;
+    text-shadow:1px 1px 5px white;
+    opacity:1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+ 
+#container{
+    position:fixed;
+    margin-top:217px;
+    margin-left:747px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    word-wrap:break-word;
+    width:443px;
+    height:567px;
+    padding-right:8px;
+    background-color:transparent;
+}
+
+.posts{
+    margin-left:23px;
+    margin-top:10px;
+    margin-bottom:30px;
+    width:400px;
+    padding:7px;
+    background-color:#ededed;
+    opacity:1;
+    padding-bottom:10px;
+}
+
+
+.posts img{
+    max-width:100%;
+    height:auto;
+    width:auto;
+}
+ 
+.posts iframe{
+    max-width:420px;
+}
+
+.msg{
+    background-color:{color:ask bg};
+    color:white;
+    border:double white;
+    padding:10px;
+}
+ 
+.sender{
+    float:right;
+    margin-left:-30px;
+    margin-top:5px;
+    font-size:15px;
+    font-family:georgia;
+    font-style:italic;
+}
+
+.sender a{
+    color:{color:links};
+    font-size:15px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.sender a:hover{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    
+}
+ 
+.answer{
+    padding-left:5px;
+}
+
+.quote{
+    margin-bottom:5px;
+    padding-top:5px;
+    font-family:verdana;
+    font-size:20px;
+    font-size:12px;
+    line-height:16px;
+    text-align:center;
+    letter-spacing:1px;
+    color:#000;
+    font-style:italic;
+}
+ 
+.quote:first-letter{
+    font-family:alexbrush;
+    font-size:28px;
+    color:{color:qfirstletter};
+    overflow:hidden;
+}
+
+.qsource{
+    text-align:right;
+}
+
+.titles{
+    font-size:20px;
+    font-family:georgia;
+    font-style:italic;
+    text-align:center;
+    padding-bottom:5px;
+    padding-top:5px;
+}
+
+.audioimg{
+    width:100px;
+    height:100px;
+    float: left;
+    margin-right: 5px;
+    border:7px solid {color:ask bg};
+}
+ 
+.audioplayer{
+    width:33px;
+    height:30px;
+    margin-left:345px;
+    margin-top:-30px;
+    overflow:hidden;
+    opacity:.5;
+}
+ 
+.tracks{
+    color:black;
+    width:98%;
+    height:80px;
+    padding-top:20px;
+    margin-top:5px;
+    line-height:45px;
+    letter-spacing:-1px;
+    font-family:georgia;
+    font-size:21px;
+    border:double #6786c9;
+}
+ 
+.artists{
+    margin-top:-50px;
+    padding-bottom:20px;
+    margin-left:8px;
+    width:80%;
+    font-style:italic;
+    font-family:georgia;
+    border-top:1px solid {color:bold};
+    color:black;
+}
+
+.permalink{
+    width:97%;
+    margin-top:10px;
+    padding:5px;
+    height:auto;
+    text-align:center;
+    background-color:{color:permalink bg};
+    border-top:double #ededed;
+    border-bottom:double #ededed;
+    border-right:double #ededed;
+    border-left:double #ededed;
+}
+ 
+.permalink a{
+    font-size:10px;
+    color:{color:plinks};
+}
+ 
+.permalink a:hover{
+    color:{color:plinks hover};
+}
+ 
+.time{
+    text-align:left;
+}
+
+.sv{
+    float:right;
+}
+ 
+.tags{
+    text-align:left;
+    margin-top:-3px;
+    margin-left:4px;
+}
+
+
+
+#notes{
+    text-align:left;
+}
+
+#s-m-t-tooltip{
+    max-width:300px;
+    background-color:#f1f1f1;
+    font-size:10px;
+    margin:20px 0px 0px 20px;
+    font-family:georgia;
+    text-transform:none;
+    color:{color:nav};
+    letter-spacing:0px;
+    padding-right:6px;
+    padding-top:1px;
+    padding-bottom:1px;
+    padding-left:6px;
+    border-left:3px solid {color:nav};
+    border-right:3px solid {color:nav};
+    border-top:1px solid {color:nav};
+    border-bottom:1px solid {color:nav};
+}
+
+{CustomCSS}</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:90,
+tip_fade_speed:600,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+
+</head><body>
+
+<div id="sword"></div>
+
+<div id="emblem">
+    <a href="https://miighted.tumblr.com/taglist"><img src="{image:emblem}"></a>
+</div>
+
+<div id="info">
+        <i><b><big>Garen Crownguard</big></b></i>
+        <br>from <i>league of legends</i>
+        <br>{ written by <b>adrian</b> }
+        
+        <br><br>independent & selective
+        <br><i>est. april 2017</i>
+        
+</div>
+    
+
+<div id="nav">
+        <a href="/" title="RETURN">I</a>
+        <a href="/ask" title="INQUIRE">II</a>
+        <a href="/guidelines" title="LAW">III</a>
+        <a href="/biography" title="RECORD">IV</a>
+        <a href="/verses" title="LIFETIMES">V</a>
+</div>
+
+    {block:Pagination}
+    <div id="pagination">
+{block:PreviousPage}<a href="{PreviousPage}">RETURN</a> /{/block:PreviousPage} {block:NextPage}<a href="{NextPage}">FORWARD</a>{/block:NextPage}
+    </div>
+    {/block:Pagination}
+    
+
+<div id="container">
+
+{block:Posts}<div class="posts">
+ 
+{block:Text}
+<div class="titles">
+    {block:Title}{Title}{/block:Title}
+</div>
+{Body}
+{/block:Text}
+ 
+{block:Photo}
+{LinkOpenTag}<img src="{PhotoURL-400}" width="400">{LinkCloseTag}
+{block:Caption}{Caption}{/block:Caption}
+{/block:Photo}
+ 
+{block:Photoset}
+{Photoset-400}
+{block:Caption}{Caption}{/block:Caption}
+{/block:Photoset}
+ 
+{block:Quote}
+<div class="quote">
+    {Quote}
+</div>
+<div class="qsource">{block:Source} —{Source}{/block:Source}</div>
+{/block:Quote}
+ 
+{block:Link}
+<div class="link">
+    <a href="{URL}" {Target}>{Name}</a>
+</div>
+{block:Description}{Description}{/block:Description}
+{/block:Link}
+ 
+{block:Chat}
+{block:Title}<t>{Title}</t>{/block:Title}
+{block:Lines}
+    {block:Label}<b>{Label}</b>{/block:Label} {Line}<br>
+{/block:Lines}
+{/block:Chat}
+ 
+{block:Audio}
+{block:AlbumArt}<div class="audioimg"><img src="{AlbumArtURL}" alt="" height="50" width="50"></div>
+{/block:AlbumArt}
+<div class="tracks">{block:TrackName}{TrackName}{/block:TrackName}
+    <div class="audioplayer">{AudioPlayerWhite}</div>
+</div>
+<div class="artists">{block:Artist}{Artist}{/block:Artist}</div><br>
+{/block:Audio}
+ 
+{block:Video}
+{Video-400}
+{block:Caption}{Caption}{/block:Caption}
+{/block:Video}
+ 
+{block:Answer}
+<div class="msg">{Question}</div>
+<div class="sender">—{Asker}&nbsp;&nbsp;</div>
+<br><div class="answer">{Answer}</div>
+{/block:Answer}
+ 
+{block:ContentSource} <!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" /> {/block:SourceLogo} {block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}--> {/block:ContentSource}
+
+<div class="permalink">
+ 
+{block:Date}
+<div class="time">
+【 {DayofMonth}.{MonthNumber}.{Year} 】
+{block:NoteCount}<font color="{color:nav}">♥</font> <small>{NoteCount}</small>
+{/block:NoteCount}
+{/block:Date}
+
+<div class="sv">{block:RebloggedFrom}
+【 <a href="{ReblogParentURL}" title="via">via</a> / 
+<a href="{ReblogRootURL}" title="source">source</a> 】
+{/block:RebloggedFrom}
+<a href="{Permalink}" title="{TimeAgo}"> <font size=4>♚</font></a>
+</div></div>
+
+{block:HasTags}<div class="tags">{block:Tags} ▶<a href="{TagURL}">{Tag}</a> {/block:Tags}</div>{/block:HasTags}
+</div>
+</div>
+
+{/block:Posts}{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}  
+ 
+{/block:Posts}</div>
+
+</body></html>
